@@ -37,6 +37,7 @@ export const Form = () => {
                     fontSize: '11px'
                 },
             });
+            setDragareatext("Drag & Drop your image here")
         }
     }
     function upload(file) {
