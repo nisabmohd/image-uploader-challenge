@@ -29,7 +29,14 @@ export const Form = () => {
             upload(data)
         }
         else {
-            alert("Not a avalid extension")
+            toast.error('Not a avalid extension', {
+                duration: 2000,
+                position: 'top-center',
+                style: {
+                    fontFamily: 'Poppins',
+                    fontSize: '11px'
+                },
+            });
         }
     }
     function upload(file) {
@@ -43,8 +50,15 @@ export const Form = () => {
                 console.log('Upload is ' + progress + '% done');
 
             },
-            (error) => {
-                alert("Error")
+            (e) => {
+                toast.error('Error Uploading ..', {
+                    duration: 2000,
+                    position: 'top-center',
+                    style: {
+                        fontFamily: 'Poppins',
+                        fontSize: '11px'
+                    },
+                });
             },
             () => {
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
@@ -57,7 +71,7 @@ export const Form = () => {
     }
     function copy() {
         navigator.clipboard.writeText(url);
-        toast('copied to clipboard', {
+        toast.success('copied to clipboard', {
             duration: 2000,
             position: 'top-center',
             style: {
@@ -72,7 +86,14 @@ export const Form = () => {
             upload(data)
         }
         else {
-            alert("Not a avalid extension")
+            toast.error('Not a avalid extension', {
+                duration: 2000,
+                position: 'top-center',
+                style: {
+                    fontFamily: 'Poppins',
+                    fontSize: '11px'
+                },
+            });
         }
     }
     return (
@@ -102,6 +123,7 @@ export const Form = () => {
 
         ) : (
             <div className='form' >
+                <Toaster />
                 <div className="imageuploader" >
                     <p className="header">Upload your image</p>
                     <p className="types" style={{width:'fit-content'}}>File should be Jpeg, Png, Gif...</p>
