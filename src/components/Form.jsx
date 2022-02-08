@@ -25,7 +25,7 @@ export const Form = () => {
         e.preventDefault();
         document.getElementById('border').style.border = "1px dashed #97BEF4"
         const data = e.dataTransfer.files[0]
-        if (data.type === "image/png" || data.type === "image/png" || data.type === "image/png" ||  data.type === "image/gif") {
+        if (data.type === "image/png" || data.type === "image/jpg" || data.type === "image/jpeg" ||  data.type === "image/gif") {
             upload(data)
         }
         else {
@@ -82,7 +82,7 @@ export const Form = () => {
     }
     function filecustom(e) {
         const data = e.target.files[0]
-        if (data.type === "image/png" || data.type === "image/png" || data.type === "image/png" ||  data.type === "image/gif") {
+        if (data.type === "image/png" || data.type === "image/jpg" || data.type === "image/jpeg" ||  data.type === "image/gif") {
             upload(data)
         }
         else {
