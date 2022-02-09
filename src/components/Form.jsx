@@ -29,7 +29,7 @@ export const Form = () => {
             upload(data)
         }
         else {
-            toast.error('Not a avalid extension', {
+            toast.error('Not a valid extension', {
                 duration: 2000,
                 position: 'top-center',
                 style: {
@@ -87,7 +87,7 @@ export const Form = () => {
             upload(data)
         }
         else {
-            toast.error('Not a avalid extension', {
+            toast.error('Not a valid extension', {
                 duration: 2000,
                 position: 'top-center',
                 style: {
